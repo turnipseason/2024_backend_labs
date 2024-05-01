@@ -1,6 +1,6 @@
 from cache import LRUCache
 
-
+cache = LRUCache(-10) # сообщение об ошибке по причине неправильного размера кэша 
 cache = LRUCache(3)
 cache.set('Jesse', 'Pinkman')
 cache.set('Walter', 'White')
