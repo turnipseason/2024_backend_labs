@@ -20,6 +20,7 @@ def minerals(request):
 
 @require_GET
 def book_search(request):
+    # name = request.GET.get('q')
     name = request.GET.get('name')
     description = request.GET.get('description')
     param_filter = Q()
@@ -47,6 +48,7 @@ def book_search(request):
 
 @require_GET
 def mineral_search(request):
+    # name = request.GET.get('q')
     name = request.GET.get('name')
     param_filter = Q()
     if name:
