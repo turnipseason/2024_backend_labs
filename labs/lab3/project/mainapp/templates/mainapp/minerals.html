@@ -1,0 +1,21 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %}
+scientists
+{% endblock %}
+
+{% block greeting %}
+<h2>come see our people</h2>
+{% endblock %}
+
+
+{% block create %}
+        <input type="text" placeholder="Введите название минерала" class="form-control" name="mineral_name"><br>
+        <select class="form-control" name="scientist_name">
+            <option value="" selected disabled>Выберите учёного, который открыл этот минерал</option>
+          {% for scientist in scientists %}
+            <option value="{{ scientist.id }}">{{ scientist.name }}</option>
+          {% endfor %}
+        </select><br>
+        <input type="date" placeholder="Введите год открытия" class="form-control" name="discovery_year"><br>
+    {% endblock %}

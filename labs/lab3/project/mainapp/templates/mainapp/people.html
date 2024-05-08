@@ -1,0 +1,17 @@
+{% extends 'mainapp/base.html' %}
+
+{% block title %}
+scientists
+{% endblock %}
+
+{% block greeting %}
+<h2>come see our people</h2>
+{% endblock %}
+
+
+
+{% block create %}
+    <input type="text" placeholder="Введите ФИО учёного" class="form-control" name="scientist_name"><br>
+    <input type="date" placeholder="Введите дату рождения" class="form-control" name="birth_year"><br>
+    <input type="text" placeholder="Введите страну" class="form-control" name="country"><br>
+{% endblock %}
